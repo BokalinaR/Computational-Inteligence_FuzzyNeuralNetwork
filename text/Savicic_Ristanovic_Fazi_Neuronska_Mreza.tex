@@ -1,0 +1,105 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a4paper]{article}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={150mm,240mm},
+ left=30mm,
+ top=30mm,
+ }
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8]{inputenc} % make weird characters work
+\usepackage{graphicx}
+%\usepackage[]{algorithm2e}
+\usepackage{caption}
+\usepackage{float}
+
+\usepackage[english,serbian]{babel}
+%\usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\usepackage{listings}
+
+%\newtheorem{primer}{Пример}[section] %ćirilični primer
+\newtheorem{primer}{Primer}[section]
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\scriptsize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=1000,                % start line enumeration with line 1000
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Python,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\begin{document}
+
+\title{Fazi neuronska mreža\\ \small{Seminarski rad u okviru kursa\\Računarska inteligencija\\ Matematički fakultet}}
+
+\author{Katarina Savičić, Bojana Ristanović\\ mi16261@alas.matf.bg.ac.rs, mi16045@alas.matf.bg.ac.rs}
+
+\maketitle
+
+\abstract{
+U ovom radu će biti predstavljena fazi neuronska mreža. Konkretnije, ovaj metod je korišćen kao metod klasifikacije podataka,
+koji u trening fazi koristi min-max algoritam, a u test fazi koristi k najbližih suseda. Nakon opisa algoritma, prikaza je njegova
+praktična primena. Na kraju, rezultati su upoređeni sa autorima rada \emph{Understanding Fuzzy Neural Network using code and animation}.
+\\
+\\
+\textbf{Ključne reči:} fazi logika, neuronske mreže, min-max, knn, klasifikacija.
+}
+\tableofcontents
+
+\newpage
+
+\section{Uvod}
+\label{sec:uvod}
+
+Fazi neuronska mreža (eng. \emph{Fuzzy neural network}) je sistem za učenje koji pronalazi parametre fazi sistema koristeći tehnike aproksimacije neuronskih mreža. To je hibridni inteligentni sistem koji kombinuje tehnike rasuđivanja fazi logike sa tehnikama učenja neuronskih mreža.\cite{fnn}
+
+Fazi min-max klasfikator (eng. \emph{The fuzzy min–max (FMM)}) je sistem koji formira hiperboksove za klasifikaciju i predviđanje. U ovom radu je pokušana modifikacija FMM-a korišćenjem algoritma k najbližih suseda (eng. \emph{k-nearest neighbors algorithm (k-NN)}) u procesu predviđanja klasa prosleđenih podataka.
+\section{Fazi Neuronske Mreže}
+\label{neuronskemreze}
+
+\section{Zaključak}
+\label{sec:zakljucak}
+
+\addcontentsline{toc}{section}{Literatura}
+\appendix
+\bibliography{seminarski} 
+\bibliographystyle{plain}
+
+\newpage
+\appendix
+
+
+\end{document}
